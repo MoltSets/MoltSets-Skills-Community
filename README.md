@@ -1,10 +1,16 @@
+<img width="100%" alt="MoltSets Skills Community" src="https://github.com/user-attachments/assets/46bab74c-3547-4e83-a15d-1e481a9b86e1" />
+
 # MoltSets Skills Community
 
-Community-submitted [Claude Skills](https://docs.claude.com/en/docs/claude-code/skills) for [MoltSets](https://app.moltsets.com) and the wider B2B / SEO / GTM stack — identity resolution, enrichment, prospecting, SEO/AEO, and more. Accepted skills are published to the [MoltSets Skills Library](https://library.moltsets.com) with credit to you.
+Community-submitted [Claude Skills](https://docs.claude.com/en/docs/claude-code/skills) for [MoltSets](https://app.moltsets.com) and the wider B2B / SEO / GTM stack — identity resolution, enrichment, prospecting, SEO/AEO, and more. Accepted skills are published to the [MoltSets Skills Library](https://library.moltsets.com) with credit to you and a full author page dedicated to you and the skills that you create.
+
+<img width="100%" alt="MoltSets Skills Library author page" src="https://github.com/user-attachments/assets/9d668c68-95c1-4d68-87c2-0b3c4e6e82af" />
 
 ## What's a skill?
 
 A skill is a `SKILL.md` file — a short YAML frontmatter (`name`, `description`) plus a markdown body of instructions Claude follows. It teaches Claude to do one job well: when to act, which tools to call, and what to return. Download a skill, drop it into Claude via **Settings → Skills**, and prompt away.
+
+<img width="100%" alt="Ready-made MoltSets skills for Claude.ai and Claude Desktop" src="https://github.com/user-attachments/assets/4490fed3-2be0-4b14-b430-1526719ddc39" />
 
 ## Use a skill
 
