@@ -8,7 +8,7 @@ A skill is a `SKILL.md` file — a short YAML frontmatter (`name`, `description`
 
 ## Use a skill
 
-1. Browse the [library](https://library.moltsets.com) or the [`skills/`](./skills) folder here.
+1. Browse the [library](https://library.moltsets.com).
 2. Download the skill's `SKILL.md`.
 3. In Claude, go to **Settings → Skills → Add skill** and select the file.
 4. Open a new chat and use one of the skill's example prompts.
