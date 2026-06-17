@@ -1,0 +1,52 @@
+# Library metadata for your skill.
+# Everything here is used to publish your skill in the MoltSets Skills Library.
+# Fill in every field unless it's marked (optional). Keep it next to your SKILL.md.
+
+# Short, title-case display name shown on the card and skill page.
+title: Your Skill Name
+
+# URL slug — lowercase, hyphenated. Must match your folder name (skills/<slug>/).
+slug: your-skill-name
+
+# One-line summary shown on the library card. Plain, no hype. ~1 sentence.
+description: What the skill does and what the user ends up with.
+
+# Pick ONE existing category, or propose a new one (maintainers will confirm):
+#   Account · Ad Audience · Enrichment · Identity Resolution · IP Intelligence · Prospecting · SEO & AEO
+category: SEO & AEO
+
+# One of: easy · intermediate · advanced
+#   easy         = single call / single step
+#   intermediate = a few steps or one tool, light branching
+#   advanced     = multi-phase pipeline, multiple tools, or heavy logic
+difficulty: intermediate
+
+# The tools / data sources the skill connects to. List one or more.
+# Reuse existing values where they fit, or add a new tool name:
+#   CSV · Google Sheets · Excel · MoltSets · RB2B · Ahrefs · Google Search Console
+connection:
+  - Ahrefs
+
+# Tags for search/filter — lowercase, hyphenated, 3–6 of them.
+tags:
+  - seo
+  - research
+
+# 1–3 example prompts a user could paste to invoke the skill.
+example_prompts:
+  - "Run topic research for example.com"
+  - "Find quick SEO wins from my Search Console export"
+
+# Who gets credit. If you're a new author, fill in bio/url/avatar so we can
+# create your author page. If you're already in the library, name is enough.
+author:
+  name: Your Name
+  url: https://linkedin.com/in/you        # (optional) profile or site link
+  avatar:                                  # (optional) path/URL to a square image, or leave blank for a placeholder
+  bio: One-line bio shown on your author page.   # (optional, required only for new authors)
+
+# (optional) Link to the original repo/gist this skill came from.
+source_url:
+
+# (optional) License you're releasing the skill under. Default: MIT.
+license: MIT
