@@ -1,0 +1,31 @@
+title: Delta Engage
+slug: delta-engage
+description: Finds high-fit Reddit & LinkedIn posts where your buyers voice the pain you solve, then drafts a comment for each in your voice — a twice-weekly engagement digest you action in ~15 minutes.
+
+category: Prospecting
+difficulty: advanced
+
+# Cookieless LinkedIn + Reddit discovery via Apify (BYO token); optional free official Reddit API.
+connection:
+  - Apify
+  - Reddit
+  - LinkedIn
+
+tags:
+  - social-selling
+  - reddit
+  - linkedin
+  - lead-generation
+  - engagement
+  - gtm
+
+example_prompts:
+  - "/delta-engage"
+  - "Find Reddit and LinkedIn posts where my ideal customers are voicing the pain my product solves, and draft a comment for each"
+  - "Run my twice-weekly engagement routine and give me the digest"
+
+author:
+  name: Newan Vinthusa
+  bio: Founder/builder at Code94 Labs working on AI-native GTM and developer tooling.
+
+license: MIT
