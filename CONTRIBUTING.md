@@ -60,6 +60,9 @@ Skills are reviewed before publishing. To get merged quickly:
 - **Self-contained.** No reliance on hidden context, private files, or another skill being loaded (link to prerequisite skills instead).
 - **Honest scope.** Don't claim capabilities the underlying tools don't have.
 - **Safe.** No destructive actions, scraping that violates a provider's terms, or handling of personal data beyond the stated purpose.
+- **No hidden monetization.** No advertising or upsell of unrelated products, no interstitial promos, and no affiliate/referral codes in links (`?fpr=`, `?ref=`, `?aff=`, etc.). Link to plain canonical URLs.
+- **Only reviewed code runs.** The skill must not self-update, `git pull`, or download and execute code at runtime — what's in the PR is what runs. Updates flow through a new PR to this repo, not an external repo the skill pulls from.
+- **Transparent side effects.** Disclose in the README any write outside the skill's own folder (e.g. `~/.claude/settings.json`) and any dependency it installs. A user's BYOK token/key may only be sent to that provider's own API — never to a third party.
 - **Original or attributed.** Submit your own work, or credit the source via `source_url` and confirm the license allows redistribution.
 
 ## Pull requests
