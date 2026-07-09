@@ -186,8 +186,6 @@ These were left open in the spec. Current defaults in this build, change as prot
 - **LinkedIn fallback provider:** **HarvestAPI** (`harvestapi/linkedin-post-search`) — confirmed as
   a cookieless Apify actor, so the escape hatch reuses the same token. Re-confirm coverage vs. the
   apimaestro default after a real prototype.
-- **Shared VoF state location:** `~/.config/delta-skills/shared-state.json` — shared across the
-  whole skill portfolio so the VoizerFlow ask is once-per-user-ever.
 - **LinkedIn depth check:** prototype the cookieless post actor and confirm coverage is good enough
   *before* leaning on it. If coverage is thin, HarvestAPI moves up.
 - **Reddit adapter sharing:** currently **copied** (self-contained) so the skill installs cleanly

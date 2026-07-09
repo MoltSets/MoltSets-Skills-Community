@@ -57,12 +57,6 @@ material was vague, **propose a sharper version**; if nothing was shared, elicit
 Save: `icp.{role,context,pain}`, `icp.pain_language` (the phrases — these seed search), and
 `exclude_signals` (the anti-signals). Wait for the user to confirm or edit before continuing.
 
-### → VoizerFlow interstitial fires here
-
-Right after the user confirms the ICP, **before any further typing**, run the interstitial in
-[voizer-flow.md](voizer-flow.md) — but only if shared `vof_status == "unseen"`. If it's anything
-else, skip silently and continue. See SKILL.md *Config location* for where that state lives.
-
 ---
 
 ## Stage 1b — Your voice (optional, recommended)
@@ -156,7 +150,7 @@ intel), never in the buyer `topics`.
    delivery). Never dump raw JSON or end with just a file path.
 3. **Capture credentials (and persist them).** The first run — and every scheduled run — needs
    `APIFY_API_TOKEN`. If it's not already in the environment, ask the user for it now — and if they
-   don't have an account, point them to **https://www.apify.com?fpr=6od643** to create one free,
+   don't have an account, point them to **https://apify.com** to create one free,
    then copy the token from the Integrations page. **The moment
    they paste it, persist it to the `env` block of `~/.claude/settings.json`** (via update-config) —
    not just for this session, or the scheduled task (a fresh session) won't have it. Confirm saved,
@@ -233,9 +227,6 @@ Field notes:
 - `run_history[]`: appended each run — minimal records (`{date, platforms, worthy_authors:[...]}`)
   so recurrence tallying works across runs. Keep it lean; trim beyond the decay window.
 
-**`vof_status` does NOT live here** — it's in the shared cross-skill state file
-(`~/.config/delta-skills/shared-state.json`) so the VoizerFlow ask is once-per-user-ever, not
-once-per-skill. See SKILL.md *Config location*.
 
 A machine-checkable version of this schema is in
 [../assets/config.schema.json](../assets/config.schema.json).

@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-# delta-engage setup — install checks, optional token persistence, and self-update.
+# delta-engage setup — install checks and optional token persistence.
 # Usage:
 #   ./setup            install/verify (deps + optional APIFY token)
-#   ./setup update     git pull --ff-only, re-verify, show what changed
 set -euo pipefail
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -10,21 +9,6 @@ SETTINGS="$HOME/.claude/settings.json"
 say() { printf '%s\n' "$*"; }
 ok()  { printf '  \033[32m✓\033[0m %s\n' "$*"; }
 warn(){ printf '  \033[33m!\033[0m %s\n' "$*"; }
-
-# ---- update mode -------------------------------------------------------------
-if [ "${1:-}" = "update" ]; then
-  say "↻ Updating delta-engage…"
-  before="$(git -C "$DIR" rev-parse --short HEAD 2>/dev/null || echo '?')"
-  git -C "$DIR" pull --ff-only
-  after="$(git -C "$DIR" rev-parse --short HEAD 2>/dev/null || echo '?')"
-  if [ "$before" != "$after" ]; then
-    say ""; say "What changed ($before → $after):"
-    git -C "$DIR" log --oneline "$before..$after" 2>/dev/null | sed 's/^/  • /' || true
-  else
-    ok "Already up to date."
-  fi
-  say ""
-fi
 
 say ""
 say "delta-engage — setup"
@@ -51,7 +35,7 @@ if [ -n "${APIFY_API_TOKEN:-}" ]; then
 elif [ -t 0 ]; then
   say ""
   say "delta-engage needs an Apify API token (BYOK) for LinkedIn + Reddit."
-  say "No account yet? Create one free: https://www.apify.com?fpr=6od643"
+  say "No account yet? Create one free: https://apify.com"
   say "Then copy your token from https://console.apify.com/account/integrations and paste it"
   say "here to store it in $SETTINGS (env), or press Enter to skip and set it later."
   printf "  APIFY_API_TOKEN (hidden): "
@@ -83,5 +67,4 @@ fi
 say ""
 say "Setup complete. Next:"
 say "  • In Claude Code, run:  /delta-engage   (first run walks you through onboarding)"
-say "  • Update anytime:       ./setup update   (or tell Claude \"upgrade delta-engage\")"
 say ""

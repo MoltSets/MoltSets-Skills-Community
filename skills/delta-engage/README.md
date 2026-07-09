@@ -97,8 +97,20 @@ The first run walks you through a short onboarding (it reads your site/docs to d
 
 - **Claude Code** (with skills enabled).
 - **Python 3** + `requests` (setup checks/installs this).
-- **An Apify API token** (BYOK) — used for LinkedIn and, by default, Reddit. [Create a free Apify account](https://www.apify.com?fpr=6od643) <sub>(referral link)</sub>, then copy your token from the [Integrations page](https://console.apify.com/account/integrations). `setup` can store it for you so scheduled runs inherit it.
+- **An Apify API token** (BYOK) — used for LinkedIn and, by default, Reddit. [Create a free Apify account](https://apify.com), then copy your token from the [Integrations page](https://console.apify.com/account/integrations). `setup` can store it for you so scheduled runs inherit it.
 - *Optional:* a free Reddit "script" app (`REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET`) if you'd rather use Reddit's official API (free, richer engagement counts) instead of Apify for Reddit.
+
+### What `setup` changes on your machine
+
+So there are no surprises, `./setup`:
+- **Writes your `APIFY_API_TOKEN` into `~/.claude/settings.json`** (the `env` block) if you choose to store it, so scheduled runs inherit it. It's a secret on disk — standard for a personal BYO token; nothing is uploaded.
+- **Installs the `requests` Python package** (`pip install --user requests`) if it's missing.
+
+Nothing else is modified, and the token is never written into this repo or sent anywhere but Apify/Reddit.
+
+### Platform terms of service
+
+Automated access to Reddit and LinkedIn — even in this cookieless, human-posts-manually design — may conflict with those platforms' Terms of Service. The cookieless-only rule and manual posting are deliberate mitigations, but **you are responsible for ensuring your use complies with each platform's ToS and your local laws.**
 
 ---
 
@@ -114,7 +126,7 @@ onboard → demand-focused ICP → fetch (Reddit + LinkedIn, cookieless) → nor
 - **Judgment** (ICP refinement, intent classification, comment drafting) is done by Claude, guided by the references.
 
 Everything is documented in [`references/`](references/):
-`onboarding.md` · `ranking.md` (the demand-vs-supply model) · `angles.md` (comment drafting) · `reddit-safety.md` · `watchlist.md` · `delivery.md` (cadence + Slack/Notion/in-app) · `voizer-flow.md` · `DECISIONS.md` (provider rationale, the cookieless rule, every design call).
+`onboarding.md` · `ranking.md` (the demand-vs-supply model) · `angles.md` (comment drafting) · `reddit-safety.md` · `watchlist.md` · `delivery.md` (cadence + Slack/Notion/in-app) · `DECISIONS.md` (provider rationale, the cookieless rule, every design call).
 
 ## Delivery & cadence
 
@@ -126,13 +138,6 @@ The skill is always user-triggered, but you can set a routine (Mon & Thu by defa
 
 > A scheduled run fires while Claude Code is open (catches up on next launch) — it's not a 24/7 cloud server.
 
-## Updating
-
-```bash
-cd ~/.claude/skills/delta-engage && ./setup update
-```
-
-…or just tell Claude **"upgrade delta-engage"** and it'll pull the latest and summarize what changed.
 
 ## Your data & keys
 

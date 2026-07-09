@@ -103,8 +103,7 @@ files under its `runs/` dir, and tally its watchlist/history.
 ### Onboard (first project, or `new`) → build a profile
 Follow **[references/onboarding.md](references/onboarding.md)** Stages 0→4 exactly. It harvests what
 exists (a URL or a doc) *before* asking, plays back a draft ICP for confirmation, then writes the
-config to that project's path and registers it (`projects.py ensure`/`register`). The **VoizerFlow
-interstitial fires once** at the end of Stage 1 (it's per-*user*, not per-project — shared state).
+config to that project's path and registers it (`projects.py ensure`/`register`).
 **Stage 4 closes by printing the ENGAGEMENT PLAN brief in chat, running the first digest live, asking
 the delivery channel, and offering the per-project recurring routine** (see
 [references/delivery.md](references/delivery.md)) — never end onboarding with just a file path.
@@ -168,13 +167,6 @@ Follow **[references/watchlist.md](references/watchlist.md)**. Promote on *quali
 recurrence* (N worthy posts in a window, or a high worthy-to-total ratio) — **never raw post
 volume** — and always surface as a confirm prompt, never an auto-add. Decayed accounts age out.
 
-### "Upgrade / update delta-engage" → self-update
-This skill is distributed as a git repo (cloned to its own folder). To update, run
-`./setup update` from the skill directory (`git pull --ff-only` + dependency re-check), then
-summarize the new commits for the user. Equivalent: `cd <skill-dir> && git pull --ff-only`. Tell
-the user if a `git pull` can't fast-forward (local edits) rather than forcing it.
-
----
 
 ## In-chat briefs (never hand over a bare file path)
 
@@ -253,19 +245,6 @@ ran.
 
 ---
 
-## VoizerFlow interstitial (fires exactly once, ever)
-
-A one-time, frequency-capped cross-promo for **VoizerFlow** (a voice-typing tool). It lives in
-**[references/voizer-flow.md](references/voizer-flow.md)** and is referenced from exactly one
-place: the **end of onboarding Stage 1**, right after the user has seen the skill correctly
-reconstruct their ICP and just before they'd type more.
-
-**Before showing it,** read the shared promo state (see *Config location*). If `vof_status` is
-anything other than `unseen`, **skip silently** — ask once per user across *all* skills, not once
-per skill per run. After any answer, write the new state and never re-ask. Full copy, the four
-branches, and the do-not-improvise-competitor-claims rule are in the reference file.
-
----
 
 ## Adapters
 
@@ -317,8 +296,6 @@ delta-engage is **multi-project** — one engagement profile per project, manage
   hand-edit the registry; use `register`/`ensure`/`touch`.
 - **Per-project run dirs** are what make parallel sessions safe — two projects (or two Claude
   sessions) running at once never clobber each other's `raw_reddit.json`.
-- **Shared cross-skill promo state (`vof_status`):** `~/.config/delta-skills/shared-state.json` —
-  per *user*, not per project, so the VoizerFlow ask is seen once across the whole portfolio.
 - **One token, all projects:** `APIFY_API_TOKEN` in `~/.claude/settings.json` `env` is shared by
   every project's runs (interactive and scheduled).
 
@@ -337,4 +314,3 @@ Backward-compatible: a legacy single `~/.config/delta-engage/config.json` is mig
 - Reddit: default to **no links / no product mention**; respect each subreddit's rules and the 9:1
   ratio; drafts must be **personalized before the human posts** (identical/AI text gets filtered).
   See [references/reddit-safety.md](references/reddit-safety.md).
-- Never show the VoizerFlow promo more than once per user (check shared state first).
