@@ -43,7 +43,7 @@ author:
   name: Your Name
   linkedin: https://linkedin.com/in/you        # (optional) your LinkedIn URL
   avatar:                                  # (optional) path/URL to a square image, upload with your submission, or leave blank for a placeholder
-  bio: One-to-three line bio shown on your author page.   # (optional, required only for new authors - see https://library.moltsets.com/authors/robb-clarke/ for example) 
+  bio: One-to-three line bio shown on your author page.   # (optional, required only for new authors - see https://moltsets.com/library/authors/robb-clarke/ for example) 
 
 # (optional) License you're releasing the skill under. Default: MIT.
 license: MIT

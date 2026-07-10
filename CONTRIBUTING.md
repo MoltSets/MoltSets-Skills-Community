@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for taking the time to contribute! 🎉 This repo is the community home for **Claude Skills** that work with [MoltSets](https://app.moltsets.com) and the wider B2B / SEO / GTM stack. Accepted skills are published to the [MoltSets Skills Library](https://library.moltsets.com) with credit to you.
+Thanks for taking the time to contribute! 🎉 This repo is the community home for **Claude Skills** that work with [MoltSets](https://app.moltsets.com) and the wider B2B / SEO / GTM stack. Accepted skills are published to the [MoltSets Skills Library](https://moltsets.com/library) with credit to you.
 
 You don't need to be an expert to contribute. If you've built a skill that saves you time, someone else probably wants it too.
 
@@ -19,7 +19,7 @@ You don't need to be an expert to contribute. If you've built a skill that saves
 
 - Read the [Code of Conduct](./CODE_OF_CONDUCT.md) first.
 - New to Claude Skills? A skill is a `SKILL.md` file with a short YAML frontmatter (`name`, `description`) and a markdown body of instructions Claude follows. See [Anthropic's skills docs](https://docs.claude.com/en/docs/claude-code/skills) for the format.
-- Browse the [live library](https://library.moltsets.com) and the existing skills in this repo to get a feel for the house style before you write your own.
+- Browse the [live library](https://moltsets.com/library) and the existing skills in this repo to get a feel for the house style before you write your own.
 
 ## Ways to contribute
 

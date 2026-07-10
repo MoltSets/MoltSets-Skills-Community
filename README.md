@@ -2,7 +2,7 @@
 
 # MoltSets Skills Community
 
-Community-submitted [Claude Skills](https://docs.claude.com/en/docs/claude-code/skills) for [MoltSets](https://app.moltsets.com) and the wider B2B / SEO / GTM stack — identity resolution, enrichment, prospecting, SEO/AEO, and more. Accepted skills are published to the [MoltSets Skills Library](https://library.moltsets.com) with credit to you and a full author page dedicated to you and the skills that you create.
+Community-submitted [Claude Skills](https://docs.claude.com/en/docs/claude-code/skills) for [MoltSets](https://app.moltsets.com) and the wider B2B / SEO / GTM stack — identity resolution, enrichment, prospecting, SEO/AEO, and more. Accepted skills are published to the [MoltSets Skills Library](https://moltsets.com/library) with credit to you and a full author page dedicated to you and the skills that you create.
 
 <img width="100%" alt="MoltSets Skills Library author page" src="https://github.com/user-attachments/assets/9d668c68-95c1-4d68-87c2-0b3c4e6e82af" />
 
@@ -14,7 +14,7 @@ A skill is a `SKILL.md` file — a short YAML frontmatter (`name`, `description`
 
 ## Use a skill
 
-1. Browse the [library](https://library.moltsets.com).
+1. Browse the [library](https://moltsets.com/library).
 2. Download the skill's `SKILL.md`.
 3. In Claude, go to **Settings → Skills → Add skill** and select the file.
 4. Open a new chat and use one of the skill's example prompts.
@@ -48,7 +48,7 @@ Full guidelines, the quality bar, and field reference are in **[CONTRIBUTING.md]
 
 ## Links
 
-- 🗂️ [MoltSets Skills Library](https://library.moltsets.com) — browse published skills
+- 🗂️ [MoltSets Skills Library](https://moltsets.com/library) — browse published skills
 - 🚀 [MoltSets](https://app.moltsets.com) — people data API & MCP (get started free)
 - 📚 [Developer docs](https://developer.moltsets.com) — API reference + MCP setup
 - 💬 [Discussions](../../discussions) · [Issues](../../issues)
